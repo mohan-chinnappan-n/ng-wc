@@ -6,7 +6,8 @@
 <link rel="stylesheet" href="https://unpkg.com/@salesforce-ux/design-system@2.9.4/assets/styles/salesforce-lightning-design-system.min.css">
     
 
-<h2 class='slds-button slds-button_brand'>How to use Web Components in Angular</h2>
+<div style='margin-left:20px;'>
+<h2 class='slds-button slds-button_brand'>vaadin Web Components in Angular (via npm)</h2>
 <greet-user></greet-user>
 
 <form [formGroup]="form" (ngSubmit)="addPerson()"> 
@@ -27,6 +28,7 @@
 
 <!-- 
   Bind the people array to the items property on the grid.
+  
 
 -->
 <vaadin-grid [items]="people"> 
@@ -34,3 +36,27 @@
   </vaadin-grid-column>
   <vaadin-grid-column path="lastName" header="Last name"> </vaadin-grid-column>
 </vaadin-grid>
+
+
+<!-- 
+
+  ref:
+  https://stackblitz.com/edit/web-components-in-angular
+  https://www.grapecity.com/blogs/using-web-components-in-angular
+-->
+<h2 class='slds-button slds-button_brand'>Counter Web Components in Angular</h2>
+
+
+<h5>Imperative Counter</h5>  
+<div class="counter-box">  
+  <i-counter #iCounter></i-counter>  
+</div>  
+<h5>Declarative Counter</h5>  
+<div class="counter-box">  
+  <d-counter [count]="count" #dCounter></d-counter>  
+</div>  
+<button (click)="increment()" class="slds-button slds-button_success">Increment</button>  
+<button (click)="decrement()" class="slds-button slds-button_brand">Decrement</button>
+
+</div>
+
